@@ -1,13 +1,13 @@
-export default ({ env }) => ({
+module.exports = ({ env }) => ({
   connection: {
-    client: 'mysql',
+    client: 'postgres',
     connection: {
-      host: env('DATABASE_HOST', '216.246.46.82'),
-      port: env.int('DATABASE_PORT', 3306),
-      database: env('DATABASE_NAME', 'qaolnfcq_ecreea_strapi'),
-      user: env('DATABASE_USERNAME', 'qaolnfcq_ecreea_ti'),
-      password: env('DATABASE_PASSWORD', 'OS;)kaLL-ghG'),
-      ssl: env.bool('DATABASE_SSL', false),
+      host: env('PGHOST', '127.0.0.1'),
+      port: env.int('PGPORT', 5432),
+      database: env('PGDATABASE', 'strapi'),
+      user: env('PGUSER', 'strapi'),
+      password: env('PGPASSWORD', 'password'),
+      ssl: env.bool(true),
     },
   },
 });
